@@ -11,12 +11,9 @@ const Modal = (props) =>{
 
     const handleChange = (e) => {
         setValue(e.target.value)
-        console.log(value)
-        
     }
 
     const  addTrade = () => {
-        // props.dispatch(OpenTrade({  }))
 
         setTimeout(() =>{ 
             if(!isNaN(value)){
@@ -25,8 +22,9 @@ const Modal = (props) =>{
                 amount = parseFloat(value)
 
                 props.dispatch(AddTrade({amount: amount }))
+                props.dispatch(OpenTrade({isOpen: false }))
             }
-        }, 2000);
+        }, 600);
     }
 
     return(
@@ -37,9 +35,10 @@ const Modal = (props) =>{
     )
 }
 
-const mapStateModal = (state, props) => {
+const mapStateModal = (state) => {
     return {
-        trades: state.trades
+        trades: state.trades,
+        isOpen: state.isOpen[0]
     }
 }
 

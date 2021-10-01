@@ -19,7 +19,8 @@ const TradeList = (props) => (
 
 const mapState = (state) => {
     return{
-        trades: state.trades
+        trades: state.trades,
+        // isOpen: state.isOpen
     }
 }
 

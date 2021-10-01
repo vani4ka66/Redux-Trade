@@ -1,9 +1,9 @@
 import "../../resources/css/layout.scss"
 import React from "react";
 import { useState } from "react";
-import {Provider, useStore } from 'react-redux'
+import {Provider } from 'react-redux'
 import ReduxStore from "../app/redux/ReduxStore";
-import {AddTrade} from '../app/redux/ReduxActions'
+import {AddTrade, OpenTrade} from '../app/redux/ReduxActions'
 import TradeList from "./TradeList";
 import Modal from "./Modal"
 
@@ -22,8 +22,14 @@ export const App: React.FunctionComponent<IProps> = ({}: IProps) => {
 
     const state = store.getState();
 
+    // setIsOpen(state.isOpen[0])
+
     const handleOpen = () => {
-       setIsOpen(true)
+
+        store.dispatch(OpenTrade({isOpen: true }))
+        setIsOpen(true)
+
+        // console.log(store.getState().isOpen[0])
     }
 
     const app = (
