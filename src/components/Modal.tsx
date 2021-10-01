@@ -26,7 +26,7 @@ const Modal = (props) =>{
 
                 props.dispatch(AddTrade({amount: amount }))
             }
-        }, 600);
+        }, 2000);
     }
 
     return(

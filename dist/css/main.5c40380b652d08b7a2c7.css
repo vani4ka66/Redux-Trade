@@ -8,10 +8,11 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  /* display: flex;
-    justify-content: center;
-    align-items: center; */ }
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 100px; }
+
+.wrapper {
+  padding: 100px; }
 
 .modal {
   position: absolute;
@@ -35,14 +36,15 @@ body {
   align-items: center; }
 
 .modal input {
-  height: 25px; }
+  height: 35px;
+  border-radius: 4px; }
 
 .modal button {
   margin-left: 10px;
   background: red;
+  border-radius: 4px;
   border: none;
   color: #FFF;
   font-size: 18px;
-  height: 25px !important;
-  padding: 10px 30px; }
+  padding: 10px 38px; }
 
