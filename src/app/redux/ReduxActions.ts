@@ -7,5 +7,5 @@ export const AddTrade = ({amount = 0} ={}) => ({
 
 export const OpenTrade = ({isOpen = false} ={}) => ({
     type: 'OPEN_TRADE',
-    isOpen: isOpen
+    isOpen : isOpen
 });

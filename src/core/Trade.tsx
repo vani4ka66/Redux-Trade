@@ -19,6 +19,7 @@ export default class Trade extends React.Component<ITrade>{
     render(){
         return (
             <Fragment>Trade: amount - {this.props.amount} {this.props.currency} </Fragment>
+
         )
     }
 

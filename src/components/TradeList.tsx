@@ -8,11 +8,7 @@ const TradeList = (props) => (
     <div>
         <h1> My Trade list:</h1>
         {props.trades.map((item, index) => {
-            return (
-                <div> {index + 1}. <Trade key={index + 1} amount={item.amount} currency={Currency.USD}></Trade>
-                </div>
-                  
-            )
+            return (<div> {index + 1}. <Trade key={index + 1} amount={item.amount} currency={Currency.USD}></Trade></div> )
         })}
     </div>
 );
@@ -20,7 +16,7 @@ const TradeList = (props) => (
 const mapState = (state) => {
     return{
         trades: state.trades,
-        // isOpen: state.isOpen
+        isOpen: state.isOpen
     }
 }
 
